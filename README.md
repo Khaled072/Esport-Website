@@ -1,3 +1,4 @@
 # Esport-Website
 
-![Screenshot 2024-02-14 214434](https://github.com/Khaled072/Esport-Website/assets/116204905/ba6435fe-ccf8-482a-a4b7-76ae161802b6)
+
+![figma web design](https://github.com/Khaled072/Esport-Website/assets/116204905/d3f7ac87-bd17-442d-bc2e-4ad45e3092ee)
