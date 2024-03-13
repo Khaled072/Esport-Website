@@ -1,0 +1,17 @@
+body {
+    background-color: #D9D9D9 !important;
+}
+
+.page-header{
+    background-color: #A6192E;
+}
+
+.page-header a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white !important;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: rgb(0, 0, 0) !important;
+    transition: 0.3s ease;
+}
