@@ -18,3 +18,10 @@ footer {
     margin: 0px 0; 
     font-size: 13px; 
 }
+
+.fim {
+    margin: 0; 
+    font-size: 5px; 
+    text-align: left; 
+    margin-top: -70px; 
+}
