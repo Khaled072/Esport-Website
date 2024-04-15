@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  background-color: #D9D9D9 !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-header{
+  background-color: #A6192E;
+}
+
+@media (max-width: 30rem) {
+  .page-header img {
+      width: 250px; /* Adjust the width for large screens */
+      height: auto;
+  }
+}
+
+.page-header a{
+  font-size: 14px;
+  color: white !important;
+}
+
+.navbar-nav .nav-item:hover > .nav-link {
+  color: rgb(0, 0, 0) !important;
+  transition: 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-right: 100px;
+}
+
+.dropdown:hover .dropdown-menu a {
+  font-size: 14px;
+  color: rgb(0, 0, 0) !important;
+}
+
+.dropdown:hover .dropdown-menu a:hover {
+  background-color: #D9D9D9;
+}
+
+.dropdown-menu img {
+  max-width: 30px;
+}
+
+.navbar-nav img {
+  max-width: 30px;
+}
+
+.shrink1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shrink-item1,
+.shrink-item2 {
+  flex: 1 0 auto;
+}
+
+.timer {
+  margin-top: 500px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust if needed */
+  text-align: center;
+  font-size: 32px;
+  margin-top: -100px;
+  
+}
+
+.containering {
+    background-color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 100px;
+    border-radius: 30px;
+}
+
+.awesome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Adjust if needed */
+  text-align: center;
+  font-size: 40px;
+  margin-top: 100px;
+  font-weight: bold;
+  
+}
+
+@media (max-width: 91.7rem) {
+  .shrink-item1 {
+      flex-basis: 24%;
+  }
+}
+
+@media (max-width: 91.7rem) {
+  .shrink-item2 {
+      flex-basis: 5%;
+  }
+}
+
+.content p{
+  margin-bottom: 80px;
+}
+
+.center-container img{
+  margin-bottom: 80px;
+  max-width: 10%; /* Set the maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.shrink2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shrink-item3,
+.shrink-item4 {
+  flex: 1 0 auto;
+}
+
+@media (max-width: 91.7rem) {
+  .shrink-item3,
+  .shrink-item4 {
+      flex-basis: 24%;
+  }
+}
+
+.check-in-custom{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.check-in{
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 30rem) {
+  .check-in {
+      width: 50%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .check-in {
+      width: 90%;
+  }
+}
+
+.Greetings{
+  background-color: #A6192E;
+  position: relative;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 23px;
+  color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#name-checkin{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px #ccc solid;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#redid-checkin{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px #ccc solid;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#majors{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px #ccc solid;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#affiliation{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px #ccc solid;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Input-Email{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px #ccc solid;
+  box-shadow: 0 1px 8px 0 #00000033, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#reasons{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px #ccc solid;
+  box-shadow: 0 1px 8px 0 #00000033, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submit-button{
+  background-color: #A6192E  !important;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff  !important;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submit-button:hover{
+  background-color: #ffffff  !important;
+  color: #A6192E  !important;
+  transition: 0.3s ease;
+}
+
+.content {
+  flex: 1;
+}
+.footer {
+  background-color: #A6192E;
+  color: rgb(255, 255, 255);
+  padding: 4px;
+  text-align: center;
+}
+.widget a {
+  color: #ffffff !important; 
+}
+.widget a:hover {
+  color: #ffffff !important; 
+  text-decoration: underline !important;
+}
+.in-footer{
+  background-color: black;
+}
