@@ -32,6 +32,8 @@ body {
   margin-right: 100px;
 }
 
+
+
 .dropdown:hover .dropdown-menu a {
   font-size: 14px;
   color: rgb(0, 0, 0) !important;
@@ -84,17 +86,18 @@ body {
     margin-right: 250px;
     margin-bottom: 100px;
     border-radius: 30px;
+    
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjust if needed */
+    text-align: center;
+    font-size: 40px;
+    
+    
 }
 
 .awesome-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh; /* Adjust if needed */
-  text-align: center;
-  font-size: 40px;
-  margin-top: 100px;
-  font-weight: bold;
+  
   
 }
 

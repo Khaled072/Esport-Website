@@ -22,6 +22,11 @@ body {
   color: white !important;
 }
 
+.redbox {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  background-color: #A6192E;
+}
 
 .navbar-nav .nav-item:hover > .nav-link {
   color: rgb(0, 0, 0) !important;
@@ -49,6 +54,8 @@ body {
 .navbar-nav img {
   max-width: 30px;
 }
+
+
 
 .shrink1 {
   display: flex;
@@ -101,15 +108,21 @@ body {
 
 .empInfo {
   text-align: left;
+  /*
   margin-top: 100px;
   margin-left: 50px;
   margin-right: 1000px;
+  */
   font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 10px ;
+  width: 200%;
+  ;
 }
 
 .leftpls{
+  display: flex;
+  justify-content: center;
   
-  margin-left: 1000px;
 }
 .check-in{
   background-color: #ffffff;
@@ -182,12 +195,24 @@ body {
   color: #ffffff  !important;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+}
+
+.goodButton{
+  width: auto;
+  height: auto;
+  display: flex;
+  /*
+  margin-top: -480px;
+  margin-left: 200px;
+  */
 }
 
 .submit-button:hover{
   background-color: #ffffff  !important;
   color: #A6192E  !important;
   transition: 0.3s ease;
+  box-sizing: border-box;
 }
 
 .content {

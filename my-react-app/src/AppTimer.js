@@ -250,24 +250,25 @@ function App() {
             </div>
         </nav>
     </header>
-    <div class = 'containering'>
+    <div class = 'containering content'>
     <div class="awesome-container">
-        <p>Engagement Center Dashboard</p>
+        <p><span style={{fontWeight: 'bold', color: '#A6192E'}}>Engagement Center Dashboard</span></p>
+        <p>User Status: {userStatus}</p>
+        <p>Queue Position: {queuePosition}</p>
+        <p>Device:</p>
+        {renderDeviceImage()}
+        <h2 id='timer'>{timer}</h2>
     </div>
 
 
 
-    <div class="center-container">
-    <div class='content'>
-      <p>User Status: {userStatus}</p>
-      <p>Queue Position: {queuePosition}</p>
-      <p>Device:</p>
-      {renderDeviceImage()}
-      <h2 id='timer'>{timer}</h2>
+    
+    
+      
       
     </div>    
-    </div>
-    </div>
+    
+    
     
     <footer class="footer">
         

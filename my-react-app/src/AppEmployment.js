@@ -2,7 +2,12 @@
 import './AppEmployment.css';
 
 function App() {
-  return (
+  
+    const handleClick = () => {
+        window.location.href = 'https://library.sdsu.edu/about/employment-opportunities/student-positions';
+      };
+
+    return (
     <html lang="en">
     <head>
     <meta charset="UTF-8" />
@@ -135,50 +140,37 @@ function App() {
             </div>
         </nav>
     </header>
-
     
+    <div class ='content' style={{ display: 'flex', justifyContent: 'center' }} >
+        <div class="row ">
+            <div class="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-3">
 
-    <div className="empInfo content" style={{ backgroundColor: '#f2f2f2', padding: '20px' }}>
+    <div className="empInfo content" style={{ backgroundColor: '#f2f2f2', padding: '20px', marginTop: '100px' }}>
     <h1 style={{ fontSize: '32px', fontWeight: 'bold' }}>Employment Opportunites at the Esports Engagement Center</h1>
     <p style={{ fontSize: '24px' }}>Interested in joining the SDSU Esports Engagement Center team?</p>
-    <p style={{ fontSize: '24px' }}>There are many amazing opportunities available the SDSU Esports Engagement Center! Students who join the team will find an engaging, highly social environment where they can discuss their favorite games or show off some skill. The team is responsible for managing the diverse gaming consoles available at the center, and ensuring that all our visitors have an enjoyable experience! Join the team today by filling out the Employee Form.</p>
+    <p style={{ fontSize: '24px' }}>There are many amazing opportunities available the SDSU Esports Engagement Center! Students who join the team will find an engaging, highly social environment where they can discuss their favorite games or show off some skill. The team is responsible for managing the diverse gaming consoles available at the center, and ensuring that all our visitors have an enjoyable experience! Join the team today by filling out the Employment Form.</p>
     </div>
+    </div>
+    </div>
+    </div>
+    <div class ='content' style={{ display: 'flex', justifyContent: 'right', alignItems: 'center'  }} >
+        <div class="row ">
+            <div class="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-3">
     <div class="leftpls content">
-    <div class="container check-in-custom content">
+    
         
         
-        <div class="mx-auto border p-3 check-in">
-            <div class="p-1 Greetings">
-                <label for="Greetings">Esports Engagement Employee Form</label>
-            </div>
-            <form action="/action_page.php">
-                <div class="ms-3 me-3 mb-3 mt-3">
-                    <label for="name-checkin" class="form-label">First Name *</label>
-                    <input type="text" class="form-control" id="name-checkin" placeholder="First Name" name="name-checkin" required/>
-                </div>
-                <div class="ms-3 me-3 mb-3 mt-3">
-                    <label for="name-checkin" class="form-label">Last Name *</label>
-                    <input type="text" class="form-control" id="name-checkin" placeholder="Last Name" name="name-checkin" required/>
-                </div>
-                
-                
-                <div class="ms-3 me-3 mb-3 mt-3" id="SDSURedID">
-                    <label for="redid-checkin" class="form-label"> SDSU RedID *</label>
-                    <input type="number" class="form-control" id="redid-checkin" placeholder="Enter Your SDSU RedID" name="redid-checkin" required/>
-                </div>
-                <div class="ms-3 me-3 mb-3 mt-3"  id="InputEmail">
-                    <label for="Input-Email" class="form-label">Email Address *</label>
-                    <input type="email" class="form-control" id="Input-Email" placeholder="Email Address" aria-describedby="emailHelp" required/>
-                    <div id="emailHelp" class="form-text">We prioritize your privacy and will never disclose your personal information to any third party.</div>
-                </div>
-                
-                <div class="text-center">
-                    <button type="submit" class="btn submit-button">Apply</button>
-                </div>
-            </form>
-        </div>
+        
+            <a href = "https://library.sdsu.edu/about/employment-opportunities/student-positions"> 
+            <button style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '-500px', marginRight: '100px', padding: '40px 60px', marginLeft: 'auto'}} type="button" class="btn submit-button goodButton" onclick={handleClick}>Employment Form</button>
+            </a>
+        
+    
     </div>
     </div>
+    </div>
+    </div>
+    
 
     
     <footer class="footer">
