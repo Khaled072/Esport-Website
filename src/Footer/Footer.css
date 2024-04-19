@@ -1,0 +1,23 @@
+.content {
+    flex: 1;
+}
+
+.footer {
+    background-color: #A6192E;
+    color: rgb(255, 255, 255);
+    padding: 4px;
+    text-align: center;
+}
+
+.widget a {
+    color: #ffffff !important; 
+}
+
+.widget a:hover {
+    color: #ffffff !important; 
+    text-decoration: underline !important;
+}
+
+.in-footer{
+    background-color: black;
+}

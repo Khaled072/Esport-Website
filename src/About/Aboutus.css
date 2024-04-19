@@ -1,0 +1,61 @@
+
+.info h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hr-line {
+    border: none;
+    border-top: 2px solid black;
+    font-weight: bolder;
+    width: 50%;
+}
+
+.info p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.info ul{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.red-dots {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 20px; /* Add some space for custom bullets */
+}
+
+.red-dots li::before {
+    content: "•"; /* Use a custom bullet */
+    color: #A6192E; /* Set the color of the bullet */
+    display: inline-block;
+    width: 1em; /* Adjust bullet size */
+    margin-left: -1em; /* Align bullet properly */
+    font-weight: bold; /* Make the dot bold */
+}
+
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.staff h1{
+    background-color: black;
+    color: #ffffff !important;
+    font-weight: normal;
+}
+
+.people {
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.staff h3{
+    color: black;
+}
+
+.staff strong{
+    color: #555555 !important;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
