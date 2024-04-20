@@ -4,7 +4,9 @@ import React, { useEffect, useState, useRef } from 'react';
 
 
 function App() {
-
+    useEffect(()=> {
+        console.log(import.meta.env.VITE_API_URL)
+    }, [])
     // We need ref in this, because we are dealing
     // with JS setInterval to keep track of it and
     // stop it when needed
