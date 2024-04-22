@@ -7,7 +7,7 @@ import axios from 'axios'
 function Employment() {
     
     const [gamingData, setgamingData] = useState([])
-    //const [refresh, setRefresh] = useState(false)
+    
 
 
     const endpoint = `${process.env.REACT_APP_API_URL}gaming`

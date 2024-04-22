@@ -1,0 +1,84 @@
+
+.check-in-custom{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.check-in{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 30rem) {
+    .check-in {
+        width: 50%;
+    }
+}
+
+@media (max-width: 30rem) {
+    .check-in {
+        width: 90%;
+    }
+}
+
+.Greetings{
+    background-color: #A6192E;
+    position: relative;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#name-checkin{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px #ccc solid;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#redid-checkin{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px #ccc solid;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#majors{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px #ccc solid;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#affiliation{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px #ccc solid;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Input-Email{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px #ccc solid;
+    box-shadow: 0 1px 8px 0 #00000033, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#reasons{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px #ccc solid;
+    box-shadow: 0 1px 8px 0 #00000033, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submit-button{
+    background-color: #A6192E  !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff  !important;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submit-button:hover{
+    background-color: #ffffff  !important;
+    color: #A6192E  !important;
+    transition: 0.3s ease;
+}
