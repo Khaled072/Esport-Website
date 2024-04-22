@@ -42,12 +42,14 @@ function Devices() {
         
         let Name = "Ethan Tift"
         let email = "etift8078@sdsu.edu"
-        let redID = 123456
+        let redID = 8888899999
         let device = deviceNom
-        let playerStatus = myDeviceNum > 0 ? 'inGame' : 'inQueue'
+        let status = myDeviceNum > 0 ? 'inGame' : 'inQueue'
+        
+        
         let position = myDeviceNum > 0 ? 0 : ((myDeviceNum * -1) + 1)
 
-        const body = {Name, email, redID, device, playerStatus, position}
+        const body = {Name, email, redID, device, status, position}
 
         console.log(body)
 

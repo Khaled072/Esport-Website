@@ -8,7 +8,7 @@ class gaming(models.Model):
     email = models.CharField(max_length=50, default = "johndoe@gmail.com")
     redID = models.IntegerField()
     device = models.CharField(max_length=20)
-    status = models.CharField(max_length=20, default = 'inActive')
+    status = models.CharField(max_length=20)
     time = models.DateTimeField(auto_now_add=True)
     position = models.IntegerField(default = 0)
 

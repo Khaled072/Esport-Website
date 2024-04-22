@@ -16,7 +16,7 @@ function App() {
 
     
 
-    const redID = 77777
+    const redID = 8888899999
     
     const getDeviceImage = () => {
         const gamingData = gamerData.find(gaming => gaming.redID === redID);
