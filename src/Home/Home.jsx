@@ -10,6 +10,9 @@ function Home() {
             <strong>
                 <h1 className="page-title">Welcome to the Esports Engagement Center</h1>
             </strong>
+            <div className="text-center">
+                <hr className="mx-auto col-8 col-xs-7 col-sm-6 col-md-5 col-lg-4 col-xl-3 HRhr" />
+            </div>
             <div className="home">
                 <section className="py-3 py-sm-3 py-md-3 py-lg-3 py-xl-4 py-xxl-3 col-xl-12">
                     <div className="container overflow-hidden">

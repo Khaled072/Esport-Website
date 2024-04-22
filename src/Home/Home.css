@@ -4,19 +4,26 @@
    margin-top: 20px;
    text-shadow: 1px 1px 2px rgba(99, 99, 99, 0.8);
 }
+
+.HRhr {
+   border: none;
+   border-top: 2px solid black;
+   width: 96% !important;
+}
+
+
 .home {
    padding: 4px;
 }
+
 .Events{
    width: 60% !important;
 }
-
 
 .events-photos img{
    width: 100%;
    height: 700px !important;
 }
-
 
 .events {
    width: 35%;
@@ -38,9 +45,6 @@ table {
 .events-links a:hover{
    color: black;
 }
-
-
-
 
 .p-info{
    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

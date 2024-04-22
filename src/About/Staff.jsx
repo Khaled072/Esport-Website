@@ -7,7 +7,7 @@ function Staff() {
         <div className="staff content mb-5 mt-4">
             <div className="container people">
                 <div className="row">
-                    <h1 className="text-center">MEET OUR STAFF</h1>
+                    <h1 className="staffs">MEET OUR STAFF</h1>
                     <h2><br/></h2>
                     <div className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center padding">
                         <figure className="figure">

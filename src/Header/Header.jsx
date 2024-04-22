@@ -1,5 +1,6 @@
 import Esport_Engagement_Center1 from '../Photos/Esport_Engagement_Center1.png';
 import ps5 from '../Photos/ps5.png';
+import ps4 from '../Photos/ps4.png';
 import pc from '../Photos/pc.png';
 import motion_racing_simulator from '../Photos/motion_racing_simulator.webp';
 import nintendo_switch from '../Photos/nintendo_switch.png';
@@ -28,6 +29,11 @@ function Header() {
                                <li>
                                    <Link className="dropdown-item" to="/ps5">
                                        <img src={ps5} alt="PS5"/> PlayStation 5
+                                   </Link>
+                               </li>
+                               <li>
+                                   <Link className="dropdown-item" to="/ps4">
+                                       <img src={ps4} alt="PS4"/> PlayStation 4
                                    </Link>
                                </li>
                                <li>
@@ -86,6 +92,11 @@ function Header() {
                                <li className="nav-item ms-5 d-lg-none">
                                    <Link className="nav-link" to="/ps5">
                                        <img src={ps5} alt="PS5" /> PlayStation 5
+                                   </Link>
+                               </li>
+                               <li className="nav-item ms-5 d-lg-none">
+                                   <Link className="nav-link" to="/ps4">
+                                       <img src={ps4} alt="PS4" /> PlayStation 4
                                    </Link>
                                </li>
                                <li className="nav-item ms-5 d-lg-none">

@@ -39,6 +39,10 @@
     flex-wrap: wrap;
 }
 
+.staffs{
+    text-align: center;
+}
+
 .staff h1{
     background-color: black;
     color: #ffffff !important;
