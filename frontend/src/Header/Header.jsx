@@ -65,7 +65,7 @@ function Header() {
                            <Link className="nav-link" to="/about">About</Link>
                        </li>
                        <li className="nav-item ms-2 me-5 d-none d-md-inline shrink-item3">
-                           <Link className="nav-link" to="/timer">Timer</Link>
+                           <Link className="nav-link" to="/dashboard">Dashboard</Link>
                        </li>
                        <li className="nav-item ms-2 me-5 d-none d-lg-inline shrink-item4">
                            <Link className="nav-link" to="/employment">Employment</Link>
@@ -118,7 +118,7 @@ function Header() {
                            <Link className="nav-link" to="/about">About</Link>
                        </li>
                        <li className="nav-item ms-3 d-md-none">
-                           <Link className="nav-link" to="/timer">Timer</Link>
+                           <Link className="nav-link" to="/dashboard">Dashboard</Link>
                        </li>     
                        <li className="nav-item ms-3 d-lg-none">
                            <Link className="nav-link" to="/support">Support</Link>
