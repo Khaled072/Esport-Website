@@ -1,36 +1,56 @@
 
 import './Employment.css';
 import React, { useEffect, useState, useRef } from 'react';
+import axios from 'axios'
+
 
 function Employment() {
     
-    useEffect(()=> {
-        console.log(process.env.REACT_APP_API_URL)
+    const [gamingData, setgamingData] = useState([])
+    
+
+
+    const endpoint = `${process.env.REACT_APP_API_URL}gaming`
+
+    const fetchData = async() => {
+        console.log('fetching...')
+        const response = await axios.get(endpoint)
+        console.log(response)
+        const {data} = response
+        setgamingData(data)
+        console.log(data)
+        return data
+    }
+    
+    const postData = async() => {
+        const Name = 'test x'
+        const redID = '1234'
+        const device = 'dawdawd'
+        const time = '11111'
+
+        const body = {Name, redID, device, time}
         
-    }, [])
+        const response = await axios.post(endpoint + '/', body)
 
-    const [data, setData] = useState([])
+        console.log(response)
 
-    useEffect(() => {
-        async function fetchData() {
-            console.log(process.env.REACT_APP_API_URL)
-            try {
-                const response = await fetch(`${process.env.REACT_APP_API_URL}gaming`);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');    
-                }
-                const result = await response.json();
-                console.log(result)
-                setData(result);
-            } catch (error) {
-                console.error("error fetching data:", error);
-            }
+        return response.data
+        
 
+    }
+
+    const handleSendData = async() => {
+        const newData = await postData()
+        if (newData) {
+            setgamingData(prevState => [...prevState, newData])
         }
 
-        fetchData();
+    }
 
-    }, []);
+    useEffect(() => {
+        fetchData()
+    }, [])
+
 
 
             
@@ -65,6 +85,10 @@ function Employment() {
                                 managing the diverse gaming consoles available at the center and ensuring that all our
                                 visitors have an enjoyable experience! Join the team today by filling out the Employment Form.
                             </p>
+                            <ul>
+                                {gamingData.map(el => <li key={el.id}>{el.Name} {el.redID}</li>)}
+                            </ul>
+                            <button onClick = {handleSendData}>click me </button>
                         </div>
                         <div className="col-12 py-1 py-sm-1 py-md-1 py-lg-1 py-xxl-1 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 mt-5">
                             <div className="content">
