@@ -21,6 +21,7 @@ import Swtich_ from './Games/Switch.jsx';
 import Racing_ from './Games/Racing.jsx';
 import PC_ from './Games/PC.jsx';
 import Support from './Support/Support.jsx';
+import Dashboard from './Dashboard/Dashboard.jsx'
 
 function App() {
  return (
@@ -43,6 +44,7 @@ function App() {
              <Route path="/support" element={ <Support /> }/>
              <Route path="/Login" element={ <Login /> }/>
              <Route path="/employment" element={ <Employment /> }/>
+             <Route path="/dashboard" element={ <Dashboard /> }/>
            </Routes>
          </div>
          <Footer />
