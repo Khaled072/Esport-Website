@@ -1,0 +1,34 @@
+.dashboard {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  width: 40%;
+  margin-left: 28%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.dashboardcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboardtitle {
+  font-size: 24px;
+  color: #A6192E;
+  font-weight: bold;
+}
+
+.dashboardstatus,
+.dashboardqueue,
+.dashboarddevice {
+  margin-top: 16px;
+}
+
+.dashboarddevice img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}

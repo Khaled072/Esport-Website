@@ -1,0 +1,23 @@
+.query{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.button-submit{
+    background-color: #A6192E  !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff  !important;
+    cursor: pointer;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-submit:hover{
+    background-color: #ffffff  !important;
+    color: #A6192E  !important;
+    transition: 0.3s ease;
+}
+
+.box h5{
+    font-weight: bold;
+}
