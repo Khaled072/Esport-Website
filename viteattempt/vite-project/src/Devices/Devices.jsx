@@ -1,5 +1,6 @@
 import ps5 from '../Photos/ps5.png';
 import pc from '../Photos/pc.png';
+import ps4 from '../Photos/ps4.png';
 import motion_racing_simulator from '../Photos/motion_racing_simulator.webp';
 import nintendo_switch from '../Photos/nintendo_switch.png';
 import "./Devices.css";
@@ -159,9 +160,20 @@ function Devices() {
     return (
        <section className="py-3 py-sm-3 py-md-3 py-lg-3 py-xl-4 py-xxl-3 devices">
            <div className="container overflow-hidden">
+           <div className="legend mb-3">
+                    <span className="legend-item">
+                        <span className="legend-square bg-success me-2"></span>
+                        Devices Available
+                    </span>
+                    <span className="legend-item">
+                        <span className="legend-square bg-danger me-2"></span>
+                        Position in Queue
+                    </span>
+                </div>
                <div className="row gy-4 gy-lg-0 justify-content-center images">
                    <div className="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-5 mt-5 me-5">
                        <div className="PS5" onClick = {() => handleSendData('PS5')}>
+                       <h3>PlayStation 5</h3>
                            <Link to="/dashboard" id="ps5" target="_blank">
                                <img src={ps5} alt="PS5"/>
                            </Link>
@@ -170,14 +182,14 @@ function Devices() {
                                    <button
                                        
                                        type="button"
-                                       className="btn btn-danger"
+                                       className={`btn ${devicesData.find(device => device.deviceName === "PS5")?.numDevice > 0 ? 'btn-success' : 'btn-danger'}`}
                                        style={{
                                            '--bs-btn-padding-y': '0.75rem',
                                            '--bs-btn-padding-x': '.5rem',
                                            '--bs-btn-font-size': '1rem'
                                        }}
                                    >
-                                       {devicesData.find(device => device.deviceName === "PS5")?.numDevice || '0'}
+                                       {devicesData.find(device => device.deviceName === "PS5")?.numDevice > 0 ? devicesData.find(device => device.deviceName === "PS5")?.numDevice : Math.abs(devicesData.find(device => device.deviceName === "PS5")?.numDevice) + 1}
                                    </button>
                                </Link>
                            </div>
@@ -185,6 +197,7 @@ function Devices() {
                    </div>
                    <div className="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-5 mt-5 me-5">
                        <div className="PC" onClick = {() => handleSendData('PC')}>
+                       <h3>Gaming PC</h3>
                            <Link to="/dashboard" id="pc" target="_blank">
                                <img src={pc} alt="PC"/>
                            </Link>
@@ -192,14 +205,14 @@ function Devices() {
                                <Link to="/dashboard" target="_blank">
                                    <button
                                        type="button"
-                                       className="btn btn-danger"
+                                       className={`btn ${devicesData.find(device => device.deviceName === "PC")?.numDevice > 0 ? 'btn-success' : 'btn-danger'}`}
                                        style={{
                                            '--bs-btn-padding-y': '0.75rem',
                                            '--bs-btn-padding-x': '.5rem',
                                            '--bs-btn-font-size': '1rem'
                                        }}
                                    >
-                                       {devicesData.find(device => device.deviceName === "PC")?.numDevice || '0'}
+                                       {devicesData.find(device => device.deviceName === "PC")?.numDevice > 0 ? devicesData.find(device => device.deviceName === "PC")?.numDevice : Math.abs(devicesData.find(device => device.deviceName === "PC")?.numDevice) + 1}
                                    </button>
                                </Link>
                            </div>
@@ -207,6 +220,7 @@ function Devices() {
                    </div>
                    <div className="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-5 mt-5 me-5">
                        <div className="Switch" onClick = {() => handleSendData('Switch')}>
+                       <h3>Nintendo Switch</h3>
                            <Link to="/dashboard" id="switch" target="_blank">
                                <img src={nintendo_switch} alt="Switch"/>
                            </Link>
@@ -214,14 +228,14 @@ function Devices() {
                                <Link to="/dashboard" target="_blank">
                                    <button
                                        type="button"
-                                       className="btn btn-danger"
+                                       className={`btn ${devicesData.find(device => device.deviceName === "Switch")?.numDevice > 0 ? 'btn-success' : 'btn-danger'}`}
                                        style={{
                                            '--bs-btn-padding-y': '0.75rem',
                                            '--bs-btn-padding-x': '.5rem',
                                            '--bs-btn-font-size': '1rem'
                                        }}
                                    >
-                                       {devicesData.find(device => device.deviceName === "Switch")?.numDevice || '0'}
+                                       {devicesData.find(device => device.deviceName === "Switch")?.numDevice > 0 ? devicesData.find(device => device.deviceName === "Switch")?.numDevice : Math.abs(devicesData.find(device => device.deviceName === "Switch")?.numDevice) + 1}
                                    </button>
                                </Link>
                            </div>
@@ -229,6 +243,7 @@ function Devices() {
                    </div>
                    <div className="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-5 mt-5 me-5">
                        <div className="Racing" onClick = {() => handleSendData('Racing')}>
+                       <h3>Racing Simulator</h3>
                            <Link to="/dashboard" id="racing" target="_blank">
                                <img src={motion_racing_simulator} alt="Racing"/>
                            </Link>
@@ -236,14 +251,37 @@ function Devices() {
                                <Link to="/dashboard" target="_blank">
                                    <button
                                        type="button"
-                                       className="btn btn-danger"
+                                       className={`btn ${devicesData.find(device => device.deviceName === "Racing")?.numDevice > 0 ? 'btn-success' : 'btn-danger'}`}
                                        style={{
                                            '--bs-btn-padding-y': '0.75rem',
                                            '--bs-btn-padding-x': '.5rem',
                                            '--bs-btn-font-size': '1rem'
                                        }}
                                    >
-                                       {devicesData.find(device => device.deviceName === "Racing")?.numDevice || '0'}
+                                       {devicesData.find(device => device.deviceName === "Racing")?.numDevice > 0 ? devicesData.find(device => device.deviceName === "Racing")?.numDevice : Math.abs(devicesData.find(device => device.deviceName === "Racing")?.numDevice) + 1}
+                                   </button>
+                               </Link>
+                           </div>
+                       </div>
+                   </div>
+                   <div className="col-12 py-2 py-sm-3 py-md-4 py-lg-2 py-xl-2 py-xxl-2 col-xs-7 col-sm-12 col-md-6 col-lg-4 col-xl-5 mt-5 me-5">
+                       <div className="PS4" onClick = {() => handleSendData('PS4')}>
+                       <h3>PlayStation 4</h3>
+                           <Link to="/dashboard" id="ps4" target="_blank">
+                               <img src={ps4} alt="PS4"/>
+                           </Link>
+                           <div className="ButtonPS4">
+                               <Link to="/dashboard" target="_blank">
+                                   <button
+                                       type="button"
+                                       className={`btn ${devicesData.find(device => device.deviceName === "PS4")?.numDevice > 0 ? 'btn-success' : 'btn-danger'}`}
+                                       style={{
+                                           '--bs-btn-padding-y': '0.75rem',
+                                           '--bs-btn-padding-x': '.5rem',
+                                           '--bs-btn-font-size': '1rem'
+                                       }}
+                                   >
+                                       {devicesData.find(device => device.deviceName === "PS4")?.numDevice > 0 ? devicesData.find(device => device.deviceName === "PS4")?.numDevice : Math.abs(devicesData.find(device => device.deviceName === "PS4")?.numDevice) + 1}
                                    </button>
                                </Link>
                            </div>

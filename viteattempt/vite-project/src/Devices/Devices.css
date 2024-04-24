@@ -7,10 +7,40 @@ button{
     width: 12%;
 }
 
+
+h3 {
+    text-align: center;
+}
 .PS5,
 .PC,
 .Switch,
+.PS4,
 .Racing{
     border: 1px solid black;
     background-color: white;
 }
+
+.legend {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .legend-square {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .bg-success {
+    background-color: green;
+  }
+  
+  .bg-danger {
+    background-color: red;
+  }
