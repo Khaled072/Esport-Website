@@ -3,13 +3,18 @@
 }
  
 
- 
+
 .page-header a{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 13px;
     color: white !important;
 }
  
+.page-header a.active {
+    color: black !important;
+    
+    font-weight: bold;
+}
  
 .navbar-nav .nav-item:hover > .nav-link {
     color: rgb(0, 0, 0) !important;
