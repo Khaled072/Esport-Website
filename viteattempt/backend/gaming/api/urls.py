@@ -5,8 +5,13 @@ gaming_router = DefaultRouter()
 devices_router = DefaultRouter()
 Users_router = DefaultRouter()
 
+
 gaming_router.register(r'gaming', gamingViewSet)
 
 devices_router.register(r'devices', devicesViewSet)
 
 Users_router.register(r'Users', UsersViewSet)
+
+
+
+

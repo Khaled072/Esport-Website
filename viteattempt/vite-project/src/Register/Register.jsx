@@ -1,4 +1,5 @@
 
+
 import "./Register.css";
 
 import axios from 'axios';
@@ -10,10 +11,12 @@ import './Register.css';
 function Register() {
   const [formData, setFormData] = useState({
     username: '',
+    email: '',
     password: '',
+    password_confirmation: '', 
   });
 
-  const userpoint = `${import.meta.env.VITE_API_URL}Users`
+  const userpoint = 'http://127.0.0.1:8000/registers/';
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -26,29 +29,35 @@ function Register() {
       [name]: value,
     }));
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage('');
     setSuccessMessage('');
     try {
-      const response = await axios.post(
-        userpoint + '/',
-        formData
-      );
-      const { token } = response.data; // Use token to store in local storage
-      localStorage.setItem('authToken', token); // Store token in local storage
+      // Check if password and password_confirmation match
+      if (formData.password !== formData.password_confirmation) {
+        throw new Error("Password and confirmation don't match");
+      }
+  
+      const response = await axios.post(userpoint , formData);
+      const { token } = response.data;
+      localStorage.setItem('authToken', token);
       console.log('Registration successful:', response.data);
       setSuccessMessage('Registration successful!');
-      
-      // Optionally, navigate to another page after successful registration
-      navigate('/login'); // Or any other route after registration
+      navigate('/login');
     } catch (error) {
       console.error('Registration failed:', error.response?.data);
       const errorMsg = error.response?.data || 'An error occurred. Please try again.';
-      setErrorMessage(errorMsg); 
+      if (errorMsg.username && errorMsg.username.includes('A user with that username already exists.')) {
+        setErrorMessage('Username must be unique.');
+      } else {
+        setErrorMessage(errorMsg);
+      }
     }
   };
+  
+  
 
   return (
     <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image">
@@ -70,11 +79,31 @@ function Register() {
               type="text"
             />
             <MDBInput
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              wrapperClass="mb-2"
+              label="Email"
+              size="lg"
+              id="form2"
+              type="email"
+            />
+            <MDBInput
               name="password"
               value={formData.password}
               onChange={handleChange}
               wrapperClass="mb-2"
               label="Password"
+              size="lg"
+              id="form3"
+              type="password"
+            />
+            <MDBInput
+              name="password_confirmation"
+              value={formData.password_confirmation}
+              onChange={handleChange}
+              wrapperClass="mb-2"
+              label="Confirm Password"
               size="lg"
               id="form4"
               type="password"
@@ -92,14 +121,3 @@ function Register() {
 }
 
 export default Register;
-
-
-/*
-<MDBInput name='firstName' value={formData.firstName} onChange={handleChange} wrapperClass='mb-2' label='First Name' size='lg' id='form1' type='text'/>
-            <MDBInput name='lastName' value={formData.lastName} onChange={handleChange} wrapperClass='mb-2' label='Last Name' size='lg' id='form2' type='text'/>
-            <MDBInput name='email' value={formData.email} onChange={handleChange} wrapperClass='mb-2' label='Your Email' size='lg' id='form3' type='email'/>
-            <MDBInput name='confirmPassword' value={formData.confirmPassword} onChange={handleChange} wrapperClass='mb-2' label='Repeat your password' size='lg' id='form5' type='password'/>
-            <div className='d-flex flex-row justify-content-start mb-4'>
-              <MDBCheckbox name='agreeTerms' checked={formData.agreeTerms} onChange={handleChange} id='flexCheckDefault' label='I agree all statements in Terms of service' />
-            </div>
-            */

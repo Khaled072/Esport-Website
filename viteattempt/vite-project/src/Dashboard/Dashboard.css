@@ -22,6 +22,10 @@
   font-weight: bold;
 }
 
+.gologin {
+  min-height: calc(100vh - 150px);
+}
+
 .dashboardstatus,
 .dashboardqueue,
 .dashboarddevice {

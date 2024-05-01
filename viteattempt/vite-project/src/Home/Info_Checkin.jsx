@@ -6,7 +6,8 @@ function Info_Checkin() {
 
     const handleLogout = async () => {
         localStorage.removeItem('username')
-        localStorage.removeItem('authtoken')
+        localStorage.removeItem('authToken')
+        localStorage.removeItem('token')
     };
 
    return (

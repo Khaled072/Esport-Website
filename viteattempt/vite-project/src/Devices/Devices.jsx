@@ -22,6 +22,8 @@ function Devices() {
     const gamepoint = `${import.meta.env.VITE_API_URL}gaming`
 
     
+
+    
         
     const storedValue = localStorage.getItem('username');
     
@@ -156,6 +158,20 @@ function Devices() {
         fetchData()
         fetchGamerData()
     }, [])
+
+    if (!storedValue) {
+        return (
+            <div>
+                <section className="py-3 py-sm-3 py-md-3 py-lg-3 py-xl-4 py-xxl-3 devices gologin">
+                <div className="container overflow-hidden">
+                <div className="legend mb-3">
+                <p>Please <Link to="/login">login</Link> to access this page.</p>
+                </div>
+                </div>
+                </section>
+            </div>
+        );
+    }
    
     return (
        <section className="py-3 py-sm-3 py-md-3 py-lg-3 py-xl-4 py-xxl-3 devices">

@@ -7,6 +7,9 @@ button{
     width: 12%;
 }
 
+.gologin {
+  min-height: calc(100vh - 150px);
+}
 
 h3 {
     text-align: center;

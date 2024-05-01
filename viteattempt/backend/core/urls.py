@@ -16,11 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from gaming.api import views
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('core.api.urls')),
+    path('login', views.login),  # Map the root URL to the 'home' view function
+    path('logout/', views.logout),
+    path('registers/', views.register),  # Map the '/todos/' URL to the 'todos' view function
+
     
     
 ]

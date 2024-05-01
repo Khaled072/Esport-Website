@@ -122,5 +122,9 @@ table {
    border: 2px solid black;
 }
 
+.fixfoot {
+   min-height: calc(100vh - 150px); 
+ }
+
 
 

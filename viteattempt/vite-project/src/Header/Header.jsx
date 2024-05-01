@@ -11,6 +11,9 @@ import "./Header.css";
 
 function Header() {
     const location = useLocation();
+
+    const storedValue = localStorage.getItem('username');
+
    return (
        // Header
        <header>
@@ -76,7 +79,11 @@ function Header() {
                             <Link className={`nav-link ${location.pathname === '/employment' ? 'active' : ''}`} to="/employment">Employment</Link>
                         </li>               
                         <li className="nav-item ms-5 me-2 d-none d-md-inline shrink-item1">
-                            <Link className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`} to="/login">Login</Link>
+                            {storedValue ? (
+                                <Link className={`nav-link ${location.pathname === '/logout' ? 'active' : ''}`} to="/logout">Logout</Link>
+                            ) : (
+                                <Link className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`} to="/login">Login</Link>
+                            )}
                         </li>
                    </ul>
                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,7 +142,11 @@ function Header() {
                     <Link className={`nav-link ${location.pathname === '/employment' ? 'active' : ''}`} to="/employment">Employment</Link>
                 </li>
                 <li className="nav-item ms-3 d-md-none">
-                    <Link className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`} to="/login">Login</Link>
+                {storedValue ? (
+                                <Link className={`nav-link ${location.pathname === '/logout' ? 'active' : ''}`} to="/logout">Logout</Link>
+                            ) : (
+                                <Link className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`} to="/login">Login</Link>
+                            )}
                 </li>
             </ul>
         </div>

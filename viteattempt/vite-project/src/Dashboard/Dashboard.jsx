@@ -5,6 +5,7 @@ import motion_racing_simulator from '../Photos/motion_racing_simulator.webp';
 import nintendo_switch from '../Photos/nintendo_switch.png';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 function Dashboard() {
@@ -14,7 +15,19 @@ function Dashboard() {
 
     const gamepoint = `${import.meta.env.VITE_API_URL}gaming`
 
-    
+    if (!storedValue) {
+        return (
+            <div>
+                <section className="py-3 py-sm-3 py-md-3 py-lg-3 py-xl-4 py-xxl-3 devices gologin">
+                <div className="container overflow-hidden">
+                <div className="legend mb-3">
+                <p>Please <Link to="/login">login</Link> to access this page.</p>
+                </div>
+                </div>
+                </section>
+            </div>
+        );
+    }
 
     const getDeviceImage = () => {
         const gamingData = gamerData.find((gaming) => gaming.Name === storedValue);
@@ -50,6 +63,8 @@ const fetchData = async () => {
     }, []);
 
     const gamingData = gamerData.find((gaming) => gaming.Name === storedValue);
+
+    
 
     return (
         <section className="dashboard">
