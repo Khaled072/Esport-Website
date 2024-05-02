@@ -15,6 +15,8 @@ function Dashboard() {
 
     const gamepoint = `${import.meta.env.VITE_API_URL}gaming`
 
+    const [remainingTime, setRemainingTime] = useState(null);
+
     if (!storedValue) {
         return (
             <div>
@@ -47,7 +49,28 @@ function Dashboard() {
         }
         return null;
     };
-const fetchData = async () => {
+
+
+    const calculateRemainingTime = () => {
+        const gamingData = gamerData.find((gaming) => gaming.Name === storedValue);
+        if (gamingData && gamingData.status === 'inGame') {
+            const endTime = new Date(gamingData.time);
+            endTime.setHours(endTime.getHours() + 1); // Add 1 hour
+            endTime.setMinutes(endTime.getMinutes() + 30); // Add 30 minutes
+            const currentTime = new Date();
+            const difference = endTime - currentTime;
+            if (difference > 0) {
+                setRemainingTime(difference);
+            } else {
+                setRemainingTime(null);
+            }
+        } else {
+            setRemainingTime(null);
+        }
+    };
+
+
+    const fetchData = async () => {
         try {
         const response = await axios.get(gamepoint);
         const { data } = response;
@@ -62,12 +85,19 @@ const fetchData = async () => {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            calculateRemainingTime();
+        }, 1000); // Update every second
+        return () => clearInterval(interval);
+    }, [gamerData]);
+
     const gamingData = gamerData.find((gaming) => gaming.Name === storedValue);
 
     
 
     return (
-        <section className="dashboard">
+        <section className="dashboard fixfoot">
             <div className="dashboardcontent">
                 <h1 className="dashboardtitle">Engagement Center Dashboard</h1>
                 <p className="dashboardstatus">
@@ -80,9 +110,21 @@ const fetchData = async () => {
                     <p>Device:</p>
                     {getDeviceImage()}
                 </div>
+                <div className="dashboard__timer">
+                    <p>Remaining Time:</p>
+                    <p className={remainingTime ? 'text-green' : 'text-red'}>{remainingTime !== null ? formatTime(remainingTime) : 'N/A'}</p>
+                </div>
             </div>
         </section>
     );
+}
+
+function formatTime(milliseconds) {
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    return `${hours}h ${minutes}m ${seconds}s`;
 }
 
 export default Dashboard;

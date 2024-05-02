@@ -122,8 +122,9 @@ table {
    border: 2px solid black;
 }
 
-.fixfoot {
+.fixfootpls {
    min-height: calc(100vh - 150px); 
+   
  }
 
 

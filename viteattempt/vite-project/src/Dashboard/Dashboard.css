@@ -10,6 +10,19 @@
   margin-bottom: 10%;
 }
 
+.dashboard__timer {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.dashboard__timer p {
+  margin: 0;
+}
+
+.fixfoot {
+  min-height: calc(70vh - 150px); 
+}
+
 .dashboardcontent {
   display: flex;
   flex-direction: column;
@@ -20,6 +33,14 @@
   font-size: 24px;
   color: #A6192E;
   font-weight: bold;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
 }
 
 .gologin {

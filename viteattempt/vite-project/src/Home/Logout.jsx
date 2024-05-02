@@ -33,7 +33,7 @@ function Info_Checkin() {
     
 
    return (
-       <div className="info-check-in mt-3 fixfoot">
+       <div className="info-check-in mt-3 fixfootpls">
            <section className="py-3 py-sm-3 py-md-3 py-lg-3 py-xl-4 py-xxl-3">
                <div className="container overflow-hidden">
                    <div className="row gy-4 gy-lg-0 justify-content-xl-between">
