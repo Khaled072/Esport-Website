@@ -70,22 +70,21 @@ def login(request):
 @api_view(['POST'])
 def logout(request):
     try:
-        # Get the user token from the request headers
+      
         token = request.headers.get('Authorization')
 
-        # Check if the token exists
+       
         if not token:
             raise ValueError('Authorization token not provided')
 
-        # Extract the user associated with the token
         user = Token.objects.get(key=token.split(' ')[1]).user
 
-        # Delete the token associated with the user
+        
         Token.objects.filter(user=user).delete()
 
-        # Return a success response
+      
         return Response({'detail': 'Logout successful'}, status=status.HTTP_200_OK)
 
     except Exception as e:
-        # Return an error response if any exception occurs
+     
         return Response({'detail': str(e)}, status=status.HTTP_400_BAD_REQUEST)
